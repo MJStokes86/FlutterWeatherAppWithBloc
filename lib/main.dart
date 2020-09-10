@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
 class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // ignore: close_sinks
     final weatherBloc = BlocProvider.of<WeatherBloc>(context);
     var cityController = TextEditingController();
 

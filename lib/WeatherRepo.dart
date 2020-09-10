@@ -6,7 +6,7 @@ import 'package:weather_app/WeatherModel.dart';
 class WeatherRepo {
   Future<WeatherModel> getWeather(String city) async {
     final result = await http.Client().get(
-        "http://api.openweathermap.org/data/2.5/weather?q=$city&appid={apikeygoeshere}");
+        "http://api.openweathermap.org/data/2.5/weather?q=$city&appid=APIKEY");
 
     if (result.statusCode != 200) throw Exception();
     return parsedJson(result.body);
